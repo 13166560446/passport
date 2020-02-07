@@ -21,5 +21,5 @@ Route::get('/index/userlist','User\IndexController@userlist');
 
 
 Route::get('/index/check','User\IndexController@md5test');
-
+Route::get('/index/check2','User\IndexController@check2');
 

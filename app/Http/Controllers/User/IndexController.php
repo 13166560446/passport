@@ -107,4 +107,24 @@ class IndexController extends Controller
             echo '验签失败';
         }
     }
+
+        public function check2(){
+        
+        echo '<pre>';print_r($_POST);
+        //验签
+        $json_data = $_POST['data'];
+        $sign = $_POST['sign'];
+        //key
+        $key = "1905"; 
+        //计算签名
+        $sign2 = md5($json_data.$key);
+        echo "接收端计算的签名：".$sign2;echo "<br>";
+        if($sign2==$sign){
+            echo "验签成功";
+        }else{
+            echo "验签失败";
+        }
+
+
+    }
 }
