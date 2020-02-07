@@ -18,3 +18,8 @@ Route::post('/index/index','User\IndexController@index');
 Route::post('/index/login','User\IndexController@login');
 Route::get('/index/userlist','User\IndexController@userlist');
 
+
+
+Route::get('/index/check','User\IndexController@md5test');
+
+
